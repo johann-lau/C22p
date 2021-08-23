@@ -43,7 +43,6 @@ function setup() {
 	rope5 = new rope(50, bob5.bob)
 	rope5.atw()
 	Engine.run(engine);
-	//qBody.setStatic(bob2.bob, true)
 }
 
 function draw() {
@@ -64,12 +63,11 @@ function draw() {
 	Body.setPosition(bob4.bob, {x:430,y:550})
 }
 
-//Write keyPressed function and apply force on pressing up_arrow key on the first bob.
 function keyPressed() {
-	if (keyCode==39) {
+	if (keyCode==LEFT_ARROW) {
 		Body.applyForce(bob1.bob,{x:bob1.bob.position.x,y:bob1.bob.position.y},{x:-0.04,y:0})
 	}
-	if (keyCode==50) {
+	if (keyCode==RIGHT_ARROW) {
 		Body.applyForce(bob5.bob,{x:bob5.bob.position.x,y:bob5.bob.position.y},{x:0.04,y:0})
 	}
 }
